@@ -1,0 +1,18 @@
+var strStr = function(haystack, needle) {
+    if( needle.length > haystack.length) return -1;
+
+    for( var i = 0 ; i < haystack.length ; i++){
+       var start = i;
+       var j = 0;
+       while(haystack.charAt(start) == needle.charAt(j) ){
+           if(j == needle.length -1){
+                return i;   
+           }
+           start++; j++;
+       }
+    }
+
+    return -1;
+};
+
+
